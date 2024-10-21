@@ -14,4 +14,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	screen_offset.x += delta * GameManager.SCROLL_SPEED

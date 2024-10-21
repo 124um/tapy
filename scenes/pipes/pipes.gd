@@ -4,6 +4,7 @@ class_name Pipes
 
 const OFF_SCREEN: float = -500.0
 @onready var score_sound: AudioStreamPlayer = $ScoreSound
+@onready var von: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
 
 
 func _ready() -> void:
@@ -15,14 +16,15 @@ func _process(delta: float) -> void:
 	check_off_screen()
 
 func check_off_screen() -> void:
-	if position.x < OFF_SCREEN:
+	if von.global_position.x < get_viewport_rect().position.x:
 		queue_free()
 
 func on_plane_died() -> void:
 	set_process(false)
 
 func _on_screen_exited() -> void:
-	queue_free()
+	#queue_free()
+	pass
 
 func _on_pipe_body_entered(body: Node2D) -> void:
 	if body is Tapy:

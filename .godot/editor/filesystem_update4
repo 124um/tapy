@@ -24,3 +24,8 @@ res://scenes/scrolling_bg/scrolling_bg.tscn
 res://scenes/scrolling_bg/scrolling_bg.gd
 res://scenes/paralax_image/parallax_image.tscn
 res://scenes/paralax_image/parallax_image.gd
+res://simple_transition/simple_transition.tscn
+res://simple_transition/simple_transition.gd
+res://scenes/complex_transition/complex_transition.gd
+res://scenes/complex_transition/complex_transition.tscn
+res://scenes/simple_transition/simple_transition.tscn
